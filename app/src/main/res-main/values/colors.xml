@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/gray</color>
+    <color name="colorAccent">@color/white</color>
+
+    <color name="green">#94CA22</color>
+    <color name="greenPress">#81B11B</color>
+    <color name="greenDark">#66C6A7</color>
+    <color name="greenDarkPress">#60B99C</color>
+    <color name="magenta">#DC4F94</color>
+    <color name="magentaPress">#CB4A89</color>
+    <color name="yellow">#F3B313</color>
+    <color name="yellowPress">#DA9f0D</color>
+    <color name="gray">#E5E6E6</color>
+    <color name="grayPress">#D5D5D5</color>
+    <color name="grayDark">#D8D8D8</color>
+    <color name="grayDarkPress">#D1D1D1</color>
+    <color name="white">#FFFFFF</color>
+    <color name="whitePress">#F5F5F5</color>
+    <color name="whitePressTransparant">#26F5F5F5</color>
+
+</resources>

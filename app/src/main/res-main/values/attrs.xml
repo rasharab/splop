@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustTextFont">
+        <!-- ** This enum is tightly coupled with the enum in FontManager! ** -->
+        <!-- ** Make sure their orders stay the same ** -->
+        <attr name="cust_font" >
+            <enum name="ProximaBold" value="0"/>
+            <enum name="ProximaExtraBold" value="1"/>
+            <enum name="ProximaLight" value="2"/>
+            <enum name="ProximaRegular" value="3"/>
+            <enum name="ProximaThin" value="4"/>
+            <enum name="ProximaBoldItalic" value="5"/>
+        </attr>
+        <attr name="bold" format="boolean" />
+    </declare-styleable>
+</resources>

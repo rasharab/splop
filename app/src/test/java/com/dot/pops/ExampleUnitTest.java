@@ -1,4 +1,4 @@
-package com.dot.pops;
+package com.dot.Pops;
 
 import org.junit.Test;
 

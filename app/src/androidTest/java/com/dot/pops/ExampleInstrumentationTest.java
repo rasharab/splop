@@ -1,4 +1,4 @@
-package com.dot.pops;
+package com.dot.Pops;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -24,6 +24,6 @@ public class ExampleInstrumentationTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.dot.pops", appContext.getPackageName());
+        assertEquals("com.dot.Pops", appContext.getPackageName());
     }
 }
