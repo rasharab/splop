@@ -8,7 +8,7 @@
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="login_with_facebook">Login With Facebook</string>
-    <string name="email">email</string>
+    <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="forgot">Forgot?</string>
     <string name="register_with_facebook">Register With Facebook</string>
@@ -63,5 +63,7 @@
     <string name="how_much_does_it_cost">How much does it cost</string>
     <string name="user_activity">User Activity</string>
     <string name="my_pops">My Pops</string>
+    <string name="enter_your_email_address_that_you_used">"enter yout email address that yout used to register. We'll send you an email and link to resset your password"</string>
+    <string name="send">SEND</string>
 
 </resources>

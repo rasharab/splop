@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
 import com.dot.Pops.R;
+import com.dot.Pops.helper.ActivityHelper;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -18,6 +19,8 @@ import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Win7 on 20/05/2016.
@@ -31,6 +34,13 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.login);
+        ButterKnife.bind(this);
 
     }
+
+    @OnClick(R.id.forgot)
+    protected void toForgot(){
+        ActivityHelper.toNextPage(this, Forgot.class);
+    }
+
 }

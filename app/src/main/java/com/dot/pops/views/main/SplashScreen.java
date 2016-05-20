@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import com.dot.Pops.R;
+import com.dot.Pops.helper.ActivityHelper;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -22,7 +23,11 @@ public class SplashScreen extends AppCompatActivity {
 
     @OnClick(R.id.login)
     protected void toLogin(){
-        Intent i = new Intent(SplashScreen.this, Login.class);
-        startActivity(i);
+        ActivityHelper.toNextPage(this, Login.class);
+    }
+
+    @OnClick(R.id.register)
+    protected void toRegister(){
+        ActivityHelper.toNextPage(this, Register.class);
     }
 }
