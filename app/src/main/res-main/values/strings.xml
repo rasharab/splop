@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Pops</string>
     <string name="google_api_key">AIzaSyAXGv8NeRlm_TQ2dFshcRHEV5-H9kfsP9o</string>
+    <string name="facebook_app_id">1111448798907246</string>
 
     <!--splash-->
     <string name="shipping_never_been_this_simple">Shipping never been this simple...</string>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/greenDark">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/layout_toolbarmain"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                layout="@layout/custome_actionbar"/>
+
+            <RelativeLayout
+                android:id="@+id/contentmain"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_centerInParent="true">
+
+                <!--logo-->
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/logo_green"/>
+
+                <!--facebook login-->
+                <com.dot.Pops.font.PopsButton
+                    android:id="@+id/loginFacebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_white"
+                    android:layout_below="@+id/logo"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:textColor="@color/greenDark"
+                    android:textSize="@dimen/font_large"
+                    android:text="@string/login_with_facebook"
+                    android:textAllCaps="false"
+                    app:cust_font="ProximaRegular"/>
+
+                <!--layout input -->
+                <LinearLayout
+                    android:id="@+id/layoutInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/loginFacebook"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <!--email-->
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/white"
+                        android:baselineAligned="false">
+
+                        <com.dot.Pops.font.PopsEditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/font_large"
+                            android:drawableLeft="@drawable/ic_mail"
+                            android:drawablePadding="@dimen/_10sdp"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <!--password-->
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/white"
+                        android:baselineAligned="false">
+
+                        <com.dot.Pops.font.PopsEditText
+                            android:id="@+id/password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/font_large"
+                            android:drawableLeft="@drawable/ic_lock"
+                            android:drawablePadding="@dimen/_15sdp"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <!--login-->
+                <com.dot.Pops.font.PopsButton
+                    android:id="@+id/login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_transparant"
+                    android:layout_below="@+id/layoutInput"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_large"
+                    android:text="@string/login"
+                    android:textAllCaps="false"
+                    app:cust_font="ProximaRegular"/>
+
+                <!--forgot-->
+                <com.dot.Pops.font.PopsTextView
+                    android:id="@+id/forgot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/login"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_large"
+                    android:text="@string/forgot"
+                    android:gravity="center"
+                    app:cust_font="ProximaRegular"/>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
