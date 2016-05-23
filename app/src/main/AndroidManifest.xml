@@ -24,7 +24,12 @@
         <activity
             android:name=".views.main.Forgot"
             android:theme="@style/AppTheme"/>
+        <activity android:name=".views.main.WhatNow"/>
+        <activity android:name=".views.main.ProfileInformation"
+            android:theme="@style/Theme.Input"/>
 
+        <activity android:name=".views.seller.MainBuyer"/>
+        
         <!--facebook-->
         <activity
             android:name="com.facebook.FacebookActivity"

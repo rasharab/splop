@@ -3,11 +3,12 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <dimen name="font_small">@dimen/_10sp</dimen>
-    <dimen name="font_regular">@dimen/_12sp</dimen>
-    <dimen name="font_large">@dimen/_14sp</dimen>
-    <dimen name="font_very_large">@dimen/_16sp</dimen>
-    <dimen name="font_super_large">@dimen/_18sp</dimen>
+    <dimen name="font_very_small">@dimen/_10sp</dimen>
+    <dimen name="font_small">@dimen/_12sp</dimen>
+    <dimen name="font_regular">@dimen/_14sp</dimen>
+    <dimen name="font_large">@dimen/_16sp</dimen>
+    <dimen name="font_very_large">@dimen/_18sp</dimen>
+    <dimen name="font_super_large">@dimen/_20sp</dimen>
 
     <!--dp-->
     <dimen name="_1sdp">1.00dp</dimen>

@@ -20,7 +20,7 @@
                 android:id="@+id/layout_toolbarmain"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
-                layout="@layout/custome_actionbar"/>
+                layout="@layout/toolbar_auth"/>
 
             <RelativeLayout
                 android:id="@+id/contentmain"
@@ -76,7 +76,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/email"
                             android:inputType="textEmailAddress"
-                            android:singleLine="true"
+                            android:lines="1"
                             android:textColor="@color/white"
                             android:textColorHint="@color/white"
                             android:textSize="@dimen/font_large"
@@ -97,7 +97,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/username"
-                            android:singleLine="true"
+                            android:lines="1"
                             android:textColor="@color/white"
                             android:textColorHint="@color/white"
                             android:textSize="@dimen/font_large"
@@ -119,7 +119,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/password"
                             android:inputType="textPassword"
-                            android:singleLine="true"
+                            android:lines="1"
                             android:textColor="@color/white"
                             android:textColorHint="@color/white"
                             android:textSize="@dimen/font_large"
@@ -141,7 +141,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/phone"
                             android:inputType="textPassword"
-                            android:singleLine="true"
+                            android:lines="1"
                             android:textColor="@color/white"
                             android:textColorHint="@color/white"
                             android:textSize="@dimen/font_large"

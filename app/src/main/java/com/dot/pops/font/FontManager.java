@@ -24,7 +24,8 @@ public class FontManager {
         ProximaLight("fonts/proxima_light.otf"),
         ProximaRegular("fonts/proxima_regular.otf"),
         ProximaThin("fonts/proxima_thin.otf"),
-        ProximaBoldItalic("fonts/proxima_boldItalic.otf");
+        ProximaBoldItalic("fonts/proxima_boldItalic.otf"),
+        ProximaSemiBold("fonts/proxima_semibold.otf");
 
         public final String fileName;
 
@@ -56,6 +57,8 @@ public class FontManager {
                 return Font.ProximaThin;
             case 5:
                 return Font.ProximaBoldItalic;
+            case 6:
+                return Font.ProximaSemiBold;
         }
 
         return null;

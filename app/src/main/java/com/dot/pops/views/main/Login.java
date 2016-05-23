@@ -38,6 +38,11 @@ public class Login extends AppCompatActivity {
 
     }
 
+    @OnClick(R.id.login)
+    protected void toLogin(){
+        ActivityHelper.toNextPage(this, WhatNow.class);
+    }
+
     @OnClick(R.id.forgot)
     protected void toForgot(){
         ActivityHelper.toNextPage(this, Forgot.class);

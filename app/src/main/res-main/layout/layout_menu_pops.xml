@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1.0">
+
+    <!--home-->
+    <ImageView
+        android:id="@+id/menuHome"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_weight="0.20"
+        android:background="@color/gray"
+        android:src="@drawable/ic_home"
+        android:scaleType="centerInside"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <!--activity-->
+    <ImageView
+        android:id="@+id/menuActivity"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_weight="0.20"
+        android:background="@color/gray"
+        android:src="@drawable/ic_activity"
+        android:scaleType="centerInside"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <!--activity-->
+    <ImageButton
+        android:id="@+id/menuPlus"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_weight="0.20"
+        android:background="@color/greenDark"
+        android:src="@drawable/ic_plus"
+        android:scaleType="centerInside"/>
+
+    <!--notification-->
+    <ImageView
+        android:id="@+id/menuNotif"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_weight="0.20"
+        android:background="@color/gray"
+        android:src="@drawable/ic_notification"
+        android:scaleType="centerInside"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <!--Profile-->
+    <ImageView
+        android:id="@+id/menuProfile"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_weight="0.20"
+        android:background="@color/gray"
+        android:src="@drawable/ic_profile"
+        android:scaleType="centerInside"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+</LinearLayout>

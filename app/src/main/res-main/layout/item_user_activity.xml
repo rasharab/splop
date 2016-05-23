@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <!--layout resi & date-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--resi-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/resi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resi - xxx"
+                android:textSize="@dimen/font_regular"
+                android:textColor="@color/magenta"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                app:cust_font="ProximaRegular"/>
+
+            <!--date-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date :  04-05-16"
+                android:textSize="@dimen/font_regular"
+                android:textColor="@color/grayDark"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/resi"
+                android:paddingLeft="@dimen/_3sdp"
+                app:cust_font="ProximaRegular"/>
+
+        </RelativeLayout>
+
+        <!--location-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <!--icon location-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_location"
+                android:layout_gravity="center_vertical"/>
+
+            <!--name-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mr.Jhon Doe"
+                android:textSize="@dimen/font_regular"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_5sdp"
+                app:cust_font="ProximaRegular"/>
+
+            <!--address-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Surabaya"
+                android:textSize="@dimen/font_regular"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_5sdp"
+                app:cust_font="ProximaRegular"/>
+
+        </LinearLayout>
+
+        <!--status-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <!--level-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paid by Cust"
+                android:textSize="@dimen/font_regular"
+                android:textColor="@color/grayDark"
+                android:layout_gravity="center_vertical"
+                app:cust_font="ProximaRegular"/>
+
+            <!--status-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Waiting for MA"
+                android:textSize="@dimen/font_regular"
+                android:textColor="@color/grayDark"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_5sdp"
+                app:cust_font="ProximaRegular"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/maintoolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp"
+            android:background="@color/white">
+
+            <!--title no back-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="@string/want_so_what_now"
+                android:gravity = "center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_large"
+                android:visibility="gone"
+                app:cust_font="ProximaRegular"/>
+
+            <!--title with back-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/toolbar_title_back"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="@string/login"
+                android:gravity = "center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_large"
+                android:paddingLeft="@dimen/_minus48sdp"
+                android:paddingStart="@dimen/_minus48sdp"
+                android:visibility="gone"
+                app:cust_font="ProximaRegular"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+</LinearLayout>

@@ -5,26 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar_detail"
-        android:layout_height="wrap_content"
+    <!--to create tollbar shadow-->
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        app:contentInsetStart="0dp"
-        android:background="@android:color/transparent">
+        android:layout_height="match_parent">
 
-        <com.dot.Pops.font.PopsTextView
-            android:id="@+id/toolbar_title"
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:text="@string/login"
-            android:gravity = "center"
-            android:textColor="@color/white"
-            android:textSize="@dimen/font_regular"
-            android:paddingLeft="@dimen/_minus48sdp"
-            android:paddingStart="@dimen/_minus48sdp"
-            app:cust_font="ProximaRegular"/>
+        <!--toolbar-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp"
+            android:background="@color/white">
+
+            <!--toolbar title-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="@string/login"
+                android:gravity = "center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_large"
+                android:paddingLeft="@dimen/_minus48sdp"
+                android:paddingStart="@dimen/_minus48sdp"
+                app:cust_font="ProximaRegular"/>
 
 
-    </android.support.v7.widget.Toolbar>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
 
 </LinearLayout>

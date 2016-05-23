@@ -12,15 +12,26 @@
         android:layout_height="match_parent"
         android:fillViewport="true">
 
+        <!--content packing-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <include
-                android:id="@+id/layout_toolbarmain"
+            <!--toolbar-->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
-                layout="@layout/custome_actionbar"/>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_above="@+id/contentmain">
+
+                <include
+                    android:id="@+id/layout_toolbarmain"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    layout="@layout/toolbar_auth"/>
+
+            </LinearLayout>
 
             <RelativeLayout
                 android:id="@+id/contentmain"
@@ -75,12 +86,13 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/email"
                             android:inputType="textEmailAddress"
-                            android:singleLine="true"
+                            android:lines="1"
                             android:textColor="@color/white"
                             android:textColorHint="@color/white"
                             android:textSize="@dimen/font_large"
                             android:drawableLeft="@drawable/ic_mail"
-                            android:drawablePadding="@dimen/_10sdp"/>
+                            android:drawablePadding="@dimen/_10sdp"
+                            app:cust_font="ProximaRegular"/>
 
                     </android.support.design.widget.TextInputLayout>
 
@@ -97,12 +109,13 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/password"
                             android:inputType="textPassword"
-                            android:singleLine="true"
+                            android:lines="1"
                             android:textColor="@color/white"
                             android:textColorHint="@color/white"
                             android:textSize="@dimen/font_large"
                             android:drawableLeft="@drawable/ic_lock"
-                            android:drawablePadding="@dimen/_15sdp"/>
+                            android:drawablePadding="@dimen/_15sdp"
+                            app:cust_font="ProximaRegular"/>
 
                     </android.support.design.widget.TextInputLayout>
 

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimary">@color/whitePress</color>
     <color name="colorPrimaryDark">@color/gray</color>
     <color name="colorAccent">@color/white</color>
 
+    <color name="black">#4A4A4A</color>
     <color name="green">#94CA22</color>
     <color name="greenPress">#81B11B</color>
     <color name="greenDark">#66C6A7</color>

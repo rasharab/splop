@@ -8,7 +8,6 @@ import android.widget.Button;
 import com.dot.Pops.R;
 import com.dot.Pops.helper.ActivityHelper;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 

@@ -10,6 +10,7 @@
             <enum name="ProximaRegular" value="3"/>
             <enum name="ProximaThin" value="4"/>
             <enum name="ProximaBoldItalic" value="5"/>
+            <enum name="ProximaSemiBold" value="6"/>
         </attr>
         <attr name="bold" format="boolean" />
     </declare-styleable>

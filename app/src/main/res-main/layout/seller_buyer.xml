@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitePress">
+
+    <include
+        android:id="@+id/actionbarWhat"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_48sdp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_below="@+id/actionbarWhat"
+        android:layout_marginBottom="@dimen/_25sdp">
+
+        <!--text seller-->
+        <com.dot.Pops.font.PopsTextView
+            android:id="@+id/seller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seller"
+            android:textSize="@dimen/font_regular"
+            android:textColor="@color/magenta"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"/>
+
+        <!--text buyer-->
+        <com.dot.Pops.font.PopsTextView
+            android:id="@+id/buyer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buyer"
+            android:textSize="@dimen/font_regular"
+            android:textColor="@color/magenta"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"/>
+
+        <!--layout button-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/seller"
+            android:layout_above="@+id/buyer"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_2sdp"
+                android:layout_height="match_parent"
+                android:background="@color/grayDark"
+                android:layout_centerHorizontal="true"/>
+
+            <!--button seller-->
+            <include
+                android:id="@+id/button_seller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/layout_box_seller"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"/>
+
+            <!--button buyer-->
+            <include
+                android:id="@+id/button_buyer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/layout_box_buyer"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"/>
+
+            <!--button setting-->
+            <include
+                android:id="@+id/button_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                layout="@layout/layout_button_setting"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

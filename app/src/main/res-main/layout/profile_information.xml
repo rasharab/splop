@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true">
+
+    <!--layout constraint-->
+    <LinearLayout
+        android:id="@+id/mainscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whitePress"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true"
+        android:fillViewport="true">
+
+        <!--layout toolbar-->
+        <include
+            android:id="@+id/actionbarProfile"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"/>
+
+        <!--layout who are you -->
+        <LinearLayout
+            android:id="@+id/namescreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            android:orientation="vertical">
+
+            <!--text who are you-->
+            <com.dot.Pops.font.PopsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/who_are_you"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_large"
+                app:cust_font="ProximaRegular"/>
+
+            <!--text tell me about xxx-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/popsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tell_about_your_self"
+                android:textSize="@dimen/font_small"
+                android:textColor="@color/black"
+                app:cust_font="ProximaLight"/>
+
+            <!--first name-->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/yellow"
+                android:baselineAligned="false">
+
+                <com.dot.Pops.font.PopsEditText
+                    android:id="@+id/firstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/first_name"
+                    android:lines="1"
+                    android:textColor="@color/yellow"
+                    android:textColorHint="@color/yellow"
+                    android:textSize="@dimen/font_regular"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--last name-->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/yellow"
+                android:baselineAligned="false">
+
+                <com.dot.Pops.font.PopsEditText
+                    android:id="@+id/lastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/last_name"
+                    android:lines="1"
+                    android:textColor="@color/yellow"
+                    android:textColorHint="@color/yellow"
+                    android:textSize="@dimen/font_regular"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <!--vertical line-->
+        <ImageView
+            android:id="@+id/lineFirst"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/grayDarkPress"/>
+
+        <!--layout where your store location-->
+        <LinearLayout
+            android:id="@+id/locationscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/_15sdp">
+
+            <!--text where your location-->
+            <com.dot.Pops.font.PopsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/where_your_store_location"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_large"
+                app:cust_font="ProximaRegular"/>
+
+            <!--text addres -->
+            <com.dot.Pops.font.PopsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address_1"
+                android:textSize="@dimen/font_regular"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:cust_font="ProximaLight"
+                android:id="@+id/popsTextView2" />
+
+            <!--button map pointing-->
+            <com.dot.Pops.font.PopsButton
+                android:id="@+id/mapPointing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/map_pointing"
+                android:textColor="@color/greenDark"
+                android:textSize="@dimen/font_regular"
+                android:background="@drawable/button_white"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textAllCaps="false"
+                app:cust_font="ProximaRegular"/>
+
+            <!--street-->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/yellow"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:baselineAligned="false">
+
+                <com.dot.Pops.font.PopsEditText
+                    android:id="@+id/street"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/street"
+                    android:lines="1"
+                    android:textColor="@color/yellow"
+                    android:textColorHint="@color/yellow"
+                    android:textSize="@dimen/font_regular"
+                    android:gravity="center"
+                    app:cust_font="ProximaRegular"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--city and postal code-->
+            <LinearLayout
+                android:id="@+id/city_postal_screen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+
+                <!--city-->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/yellow"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.50"
+                    android:layout_marginRight="@dimen/_3sdp"
+                    android:baselineAligned="false">
+
+                    <com.dot.Pops.font.PopsEditText
+                        android:id="@+id/city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/city"
+                        android:lines="1"
+                        android:textColor="@color/yellow"
+                        android:textColorHint="@color/yellow"
+                        android:textSize="@dimen/font_regular"
+                        android:gravity="center"
+                        app:cust_font="ProximaRegular"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!--postal code-->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/yellow"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.50"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:baselineAligned="false">
+
+                    <com.dot.Pops.font.PopsEditText
+                        android:id="@+id/postalCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/postal_code"
+                        android:lines="1"
+                        android:textColor="@color/yellow"
+                        android:textColorHint="@color/yellow"
+                        android:textSize="@dimen/font_regular"
+                        android:gravity="center"
+                        app:cust_font="ProximaRegular"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--vertical line with button (location)-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <!--vertical line with button (location)-->
+            <ImageView
+                android:id="@+id/lineTwo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/grayDarkPress"
+                android:layout_centerVertical="true"/>
+
+            <!--button location-->
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/buttonLocation"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_plus"
+                android:scaleType="centerInside"
+                android:layout_centerInParent="true"
+                app:backgroundTint="@color/magenta"
+                app:rippleColor="@color/magentaPress"
+                app:borderWidth="0dp"
+                app:elevation="0dp"
+                app:fabSize="mini"/>
+
+        </RelativeLayout>
+
+        <!--text bank account-->
+        <LinearLayout
+            android:id="@+id/bankscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/buttonLocation"
+            app:layout_constraintLeft_toLeftOf="@id/mainscreen"
+            app:layout_constraintRight_toRightOf="@id/mainscreen">
+
+            <!--text your bank-->
+            <com.dot.Pops.font.PopsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_bank_account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_large"
+                app:cust_font="ProximaRegular"/>
+
+            <!--text we need bank-->
+            <com.dot.Pops.font.PopsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/we_need_your_bank_account_for_verification"
+                android:textSize="@dimen/font_small"
+                android:textColor="@color/black"
+                app:cust_font="ProximaLight"/>
+
+            <!--account number 1-->
+            <com.dot.Pops.font.PopsTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account_number_1"
+                android:textSize="@dimen/font_regular"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:cust_font="ProximaRegular"/>
+
+            <!--bank name-->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/yellow"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:baselineAligned="false">
+
+                <com.dot.Pops.font.PopsEditText
+                    android:id="@+id/bankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/bank_name"
+                    android:lines="1"
+                    android:textColor="@color/yellow"
+                    android:textColorHint="@color/yellow"
+                    android:textSize="@dimen/font_regular"
+                    android:gravity="center"
+                    app:cust_font="ProximaRegular"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--bank acc mandatory-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/bankMandatory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bank_acc_mandatory_for_seller_account"
+                android:textSize="@dimen/font_very_small"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:cust_font="ProximaLight"/>
+
+        </LinearLayout>
+
+        <!--vertical line with button (location)-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <!--vertical line with button (location)-->
+            <ImageView
+                android:id="@+id/lineThree"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/grayDarkPress"
+                android:layout_centerVertical="true"/>
+
+            <!--button location-->
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/buttonBank"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_plus"
+                android:scaleType="centerInside"
+                android:layout_centerInParent="true"
+                app:backgroundTint="@color/magenta"
+                app:rippleColor="@color/magentaPress"
+                app:borderWidth="0dp"
+                app:elevation="0dp"
+                app:fabSize="mini"/>
+
+        </RelativeLayout>
+
+        <!--button wallet-->
+        <com.dot.Pops.font.PopsButton
+            android:id="@+id/buttonWallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/connnect_doku_wallet"
+            android:textSize="@dimen/font_regular"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/button_yellow"
+            app:cust_font="ProximaRegular"
+            app:layout_constraintTop_toBottomOf="@id/buttonBank"
+            app:layout_constraintLeft_toLeftOf="@id/mainscreen"
+            app:layout_constraintRight_toRightOf="@id/mainscreen"/>
+
+        <!--button save-->
+        <com.dot.Pops.font.PopsButton
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:textSize="@dimen/font_regular"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/button_green_dark"
+            app:cust_font="ProximaRegular"
+            app:layout_constraintTop_toBottomOf="@id/buttonWallet"
+            app:layout_constraintLeft_toLeftOf="@id/mainscreen"
+            app:layout_constraintRight_toRightOf="@id/mainscreen"/>
+
+    </LinearLayout>
+
+</ScrollView>

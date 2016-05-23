@@ -16,11 +16,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <include
-                android:id="@+id/layout_toolbarmain"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
-                layout="@layout/custome_actionbar"/>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_above="@+id/contentmain">
+
+                <include
+                    android:id="@+id/layout_toolbarmain"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    layout="@layout/toolbar_auth"/>
+
+            </LinearLayout>
 
             <RelativeLayout
                 android:id="@+id/contentmain"
@@ -71,7 +80,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/email"
                             android:inputType="textEmailAddress"
-                            android:singleLine="true"
+                            android:lines="1"
                             android:textColor="@color/white"
                             android:textColorHint="@color/white"
                             android:textSize="@dimen/font_large"

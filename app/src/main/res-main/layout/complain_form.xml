@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--layout toolbar-->
+        <include
+            android:id="@+id/actionbarComplain"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            layout="@layout/actionbar_back"/>
+
+        <!--layout content-->
+        <LinearLayout
+            android:id="@+id/contentscreen"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_below="@+id/actionbarComplain">
+
+            <!--text shipping now-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/tellme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tell_me"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_super_large"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cust_font="ProximaRegular"/>
+
+            <!--what is your problem-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/whatIs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/what_is_your_problem"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_regular"
+                app:cust_font="ProximaRegular"/>
+
+            <!--title-->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/yellow"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:baselineAligned="false">
+
+                <com.dot.Pops.font.PopsEditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/title"
+                    android:lines="1"
+                    android:textColor="@color/yellow"
+                    android:textColorHint="@color/yellow"
+                    android:textSize="@dimen/font_large"
+                    app:cust_font="ProximaRegular"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--category-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/categoryView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <com.dot.Pops.font.PopsEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category"
+                    android:textColor="@color/grayDark"
+                    android:textSize="@dimen/font_regular"
+                    android:background="@drawable/button_white"
+                    android:padding="@dimen/_10sdp"
+                    android:drawableRight="@drawable/ic_cevron_grey"
+                    app:cust_font="ProximaRegular"/>/>
+
+            </android.support.v7.widget.CardView>
+
+            <!--title detail-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/titleDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail"
+                android:textSize="@dimen/font_regular"
+                android:textColor="@color/magenta"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:cust_font="ProximaLight"/>
+
+            <!--description-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="@dimen/_70sdp"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <com.dot.Pops.font.PopsEditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:hint="@string/write_something"
+                    android:textColor="@color/grayDark"
+                    android:textColorHint="@color/grayDark"
+                    android:textSize="@dimen/font_regular"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    app:cust_font="ProximaRegular"/>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contentscreen"
+            android:layout_above="@+id/buttonSubmit"/>
+
+        <!--button submit-->
+        <com.dot.Pops.font.PopsButton
+            android:id="@+id/buttonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_regular"
+            android:background="@color/greenDark"
+            android:layout_alignParentBottom="true"
+            app:cust_font="ProximaRegular"/>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
