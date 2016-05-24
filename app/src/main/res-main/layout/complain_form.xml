@@ -84,7 +84,7 @@
                     android:background="@drawable/button_white"
                     android:padding="@dimen/_10sdp"
                     android:drawableRight="@drawable/ic_cevron_grey"
-                    app:cust_font="ProximaRegular"/>/>
+                    app:cust_font="ProximaRegular"/>
 
             </android.support.v7.widget.CardView>
 

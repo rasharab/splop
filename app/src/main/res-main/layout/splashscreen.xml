@@ -13,24 +13,57 @@
         android:id="@+id/mainscreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_splash"
         android:fitsSystemWindows="true">
 
+        <RelativeLayout
+            android:id="@+id/home_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fitsSystemWindows="true">
 
-        <!--logo pops-->
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/logo_green"
+            <VideoView
+                android:id="@+id/bgVideo"
+                android:scrollbars="none"
+                android:clickable="false"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:fitsSystemWindows="true"/>
+
+        </RelativeLayout>
+
+
+        <!--layout video-->
+        <LinearLayout
+            android:id="@+id/layout_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1.0"
             app:layout_constraintCenterX_toCenterX="@id/mainscreen"
-            tools:layout_editor_absoluteX="93dp"
-            tools:layout_editor_absoluteY="122dp"
-            app:layout_constraintLeft_toLeftOf="@+id/mainscreen"
-            tools:layout_constraintLeft_creator="0"
-            app:layout_constraintRight_toRightOf="@+id/mainscreen"
-            tools:layout_constraintRight_creator="0"
-            app:layout_constraintHorizontal_bias="0.53" />
+            app:layout_constraintCenterY_toCenterY="@id/mainscreen">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:layout_gravity="center_horizontal">
+
+                <!--logo pops-->
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:background="@drawable/logo_green"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
 
         <!--text shipping never xxx-->
         <com.dot.Pops.font.PopsTextView

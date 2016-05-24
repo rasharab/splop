@@ -3,13 +3,12 @@ package com.dot.Pops.views.main;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
 import com.dot.Pops.R;
 import com.dot.Pops.helper.ActivityHelper;
-import com.dot.Pops.views.seller.MainBuyer;
+import com.dot.Pops.views.seller.MainSeller;
+import com.dot.Pops.views.seller.MapPointing;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -19,8 +18,6 @@ import butterknife.OnClick;
 
 public class ProfileInformation extends AppCompatActivity {
 
-    @Bind(R.id.toolbar)
-    Toolbar toolbar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,9 +31,14 @@ public class ProfileInformation extends AppCompatActivity {
         ActivityHelper.addActionbar(this, getString(R.string.profile_information));
     }
 
+    @OnClick(R.id.mapPointing)
+    protected void toMapPointing(){
+        ActivityHelper.toNextPage(this, MapPointing.class);
+    }
+
     @OnClick(R.id.buttonSave)
     protected void toSave(){
-        ActivityHelper.toNextPage(this, MainBuyer.class);
+        ActivityHelper.toNextPage(this, MainSeller.class);
     }
 
 }

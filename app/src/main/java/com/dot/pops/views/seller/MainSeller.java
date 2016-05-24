@@ -7,10 +7,18 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.PopupWindow;
 
 import com.dot.Pops.R;
 import com.dot.Pops.helper.ActivityHelper;
+
+import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent;
+import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEventListener;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -20,7 +28,7 @@ import butterknife.OnClick;
  * Created by Win7 on 23/05/2016.
  */
 
-public class MainBuyer extends AppCompatActivity {
+public class MainSeller extends AppCompatActivity {
 
     protected static final int ACTIONBAR_NO_BACK = 0;
     protected static final int ACTIONBAR_BACK = 1;
@@ -30,8 +38,8 @@ public class MainBuyer extends AppCompatActivity {
     FragmentManager fmSingle = getSupportFragmentManager();
     FragmentTransaction fragmentTransaction;
 
-    @Bind(R.id.actionbarProfile)
-    View viewToolbar;
+    PopupWindow popupWindow;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,11 +47,36 @@ public class MainBuyer extends AppCompatActivity {
         setContentView(R.layout.main_seller);
         ButterKnife.bind(this);
         setup();
+
+
     }
 
     private void setup() {
+//        set first fragment
         FragmentSeller fragment = new HomeSeller();
         changeFragment(fragment);
+
+//        display popup menu
+        findViewById(R.id.scrollscreen).post(new Runnable() {
+            public void run() {
+                popupWindow();
+            }
+        });
+
+//        handling event keyboard
+        KeyboardVisibilityEvent.setEventListener(this, new KeyboardVisibilityEventListener() {
+            @Override
+            public void onVisibilityChanged(boolean isOpen) {
+                if (isOpen){
+                    Log.d("keyboard", isOpen+"");
+                    popupWindow.dismiss();
+                }else {
+                    Log.d("keyboard", isOpen+"");
+                    popupWindow();
+                }
+
+            }
+        });
     }
 
     /**
@@ -59,6 +92,15 @@ public class MainBuyer extends AppCompatActivity {
         }
     }
 
+//    menu
+    public void popupWindow(){
+        View popupView = this.getLayoutInflater().inflate(R.layout.layout_menu,null);
+        popupWindow = new PopupWindow(popupView,
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        popupWindow.setFocusable(false);
+        popupWindow.setOutsideTouchable(false);
+        popupWindow.showAtLocation(popupView, Gravity.BOTTOM, 0, 0);
+    }
 
     /**
      * change fragment
@@ -86,10 +128,13 @@ public class MainBuyer extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (fmSingle.getBackStackEntryCount() > 0) {
+        if (fmSingle.getBackStackEntryCount() > 1) {
             fmSingle.popBackStack();
+            Log.d("fragment", "back");
         } else {
+            Log.d("fragment", "finist");
             super.onBackPressed();
+            finish();
         }
     }
 }
