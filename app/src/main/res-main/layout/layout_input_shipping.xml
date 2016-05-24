@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/contentscreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp">
+
+        <!--line vertical icon origin - destination-->
+        <ImageView
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            app:layout_constraintCenterX_toCenterX="@id/iconOrigin"
+            app:layout_constraintBottom_toTopOf="@id/iconDestination"
+            app:layout_constraintTop_toBottomOf="@id/iconOrigin"/>
+
+        <!--icon origin-->
+        <ImageView
+            android:id="@+id/iconOrigin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/ic_origin"
+            app:layout_constraintCenterY_toCenterY="@+id/inputOrigin"/>
+
+        <!--icon destination-->
+        <ImageView
+            android:id="@+id/iconDestination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_location"
+            app:layout_constraintCenterY_toCenterY="@+id/inputDestination"/>
+
+        <!--origin-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputOrigin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/grayDark"
+            android:baselineAligned="false"
+            android:layout_marginLeft="@dimen/_3sdp"
+            app:layout_constraintLeft_toRightOf="@id/iconOrigin"
+            app:layout_constraintTop_toTopOf="@id/contentscreen"
+            app:layout_constraintRight_toRightOf="@id/contentscreen">
+
+            <com.dot.Pops.font.PopsEditText
+                android:id="@+id/origin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/origin"
+                android:lines="1"
+                android:gravity="center_vertical"
+                android:textColor="@color/grayDark"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/font_regular"
+                android:paddingBottom="@dimen/_15sdp"
+                app:cust_font="ProximaRegular"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--destination-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/grayDark"
+            android:baselineAligned="false"
+            app:layout_constraintTop_toBottomOf="@+id/inputOrigin"
+            app:layout_constraintLeft_toLeftOf="@id/contentscreen"
+            app:layout_constraintRight_toRightOf="@id/contentscreen">
+
+            <com.dot.Pops.font.PopsEditText
+                android:id="@+id/destination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/destination"
+                android:lines="1"
+                android:paddingLeft="@dimen/_27sdp"
+                android:textColor="@color/grayDark"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/font_regular"
+                android:paddingBottom="@dimen/_15sdp"
+                app:cust_font="ProximaRegular"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--weight-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/grayDark"
+            android:baselineAligned="false"
+            app:layout_constraintTop_toBottomOf="@id/inputDestination"
+            app:layout_constraintLeft_toLeftOf="@id/contentscreen"
+            app:layout_constraintRight_toRightOf="@id/contentscreen">
+
+            <com.dot.Pops.font.PopsEditText
+                android:id="@+id/weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/weight_kg"
+                android:lines="1"
+                android:textColor="@color/grayDark"
+                android:textColorHint="@color/grayDark"
+                android:textSize="@dimen/font_regular"
+                app:cust_font="ProximaRegular"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--layout size-->
+        <LinearLayout
+            android:id="@+id/layout_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1.0"
+            app:layout_constraintTop_toBottomOf="@id/inputWeight"
+            app:layout_constraintLeft_toLeftOf="@id/contentscreen"
+            app:layout_constraintRight_toRightOf="@id/contentscreen">
+
+            <!--length-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputLength"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/grayDark"
+                android:layout_weight=".31"
+                android:layout_marginRight="@dimen/_1sdp"
+                android:baselineAligned="false">
+
+                <com.dot.Pops.font.PopsEditText
+                    android:id="@+id/length"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/length"
+                    android:lines="1"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/grayDark"
+                    android:textColorHint="@color/grayDark"
+                    android:textSize="@dimen/font_regular"
+                    app:cust_font="ProximaRegular"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--width-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputWidth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/grayDark"
+                android:layout_weight=".37"
+                android:layout_marginLeft="@dimen/_1sdp"
+                android:layout_marginRight="@dimen/_1sdp"
+                android:baselineAligned="false">
+
+                <com.dot.Pops.font.PopsEditText
+                    android:id="@+id/width"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/width"
+                    android:lines="1"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/grayDark"
+                    android:textColorHint="@color/grayDark"
+                    android:textSize="@dimen/font_regular"
+                    app:cust_font="ProximaRegular"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--height-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputHeight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/grayDark"
+                android:layout_weight=".31"
+                android:layout_marginLeft="@dimen/_1sdp"
+                android:baselineAligned="false">
+
+                <com.dot.Pops.font.PopsEditText
+                    android:id="@+id/height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/height"
+                    android:lines="1"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/grayDark"
+                    android:textColorHint="@color/grayDark"
+                    android:textSize="@dimen/font_regular"
+                    app:cust_font="ProximaRegular"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <!--button check rate-->
+        <com.dot.Pops.font.PopsButton
+            android:id="@+id/buttonRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/check_rate"
+            android:textSize="@dimen/font_regular"
+            android:textColor="@color/whitePress"
+            android:textAllCaps="false"
+            android:background="@drawable/button_yellow"
+            android:layout_marginTop="@dimen/_50sdp"
+            app:layout_constraintTop_toBottomOf="@id/layout_size"
+            app:layout_constraintLeft_toLeftOf="@id/contentscreen"
+            app:layout_constraintRight_toRightOf="@id/contentscreen"
+            app:cust_font="ProximaRegular"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

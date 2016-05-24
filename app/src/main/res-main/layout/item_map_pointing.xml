@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_white">
+
+    <!--input search-->
+    <com.dot.Pops.font.PopsEditText
+        android:id="@+id/cityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/city"
+        android:textColor="@color/yellow"
+        android:textColorHint="@color/yellow"
+        android:textSize="@dimen/font_regular"
+        android:background="@drawable/button_white"
+        android:padding="@dimen/_10sdp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/iconMarker"
+        app:cust_font="ProximaRegular"/>
+
+    <ImageView
+        android:id="@+id/iconMarker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_marker_pink"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_5sdp"/>
+
+</RelativeLayout>

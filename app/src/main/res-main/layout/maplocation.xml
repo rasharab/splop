@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--layout toolbar-->
+    <include
+        android:id="@+id/actionbarMap"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_48sdp"/>
+
+    <!--map-->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbarMap"
+        android:layout_above="@+id/buttonSave"/>
+
+    <!--layout searching-->
+    <RelativeLayout
+        android:id="@+id/searchscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_below="@+id/actionbarMap"
+        android:layout_above="@+id/buttonSave">
+
+        <!--input search-->
+        <com.dot.Pops.font.PopsEditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/city"
+            android:textColor="@color/yellow"
+            android:textColorHint="@color/yellow"
+            android:textSize="@dimen/font_regular"
+            android:background="@color/white"
+            android:padding="@dimen/_10sdp"
+            android:drawableRight="@drawable/ic_marker_pink"
+            app:cust_font="ProximaRegular"/>
+
+        <!--list city-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:scrollbars="vertical"
+            android:layout_below="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <!--button save-->
+    <com.dot.Pops.font.PopsButton
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_regular"
+        android:background="@color/greenDark"
+        android:layout_alignParentBottom="true"
+        app:cust_font="ProximaRegular"/>
+
+</RelativeLayout>

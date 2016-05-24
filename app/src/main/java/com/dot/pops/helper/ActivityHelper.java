@@ -38,10 +38,20 @@ public class ActivityHelper {
     public static boolean keyboadShow(Context context){
         boolean isShow = false;
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
-        isShow = imm.isAcceptingText();
+        if (imm.isAcceptingText()){
+            isShow = true;
+        }else {
+            isShow = false;
+        }
 
         return isShow;
 
+    }
+
+//    hide keyboard
+    public static void hideSoftKeyboard(Activity activity) {
+        InputMethodManager inputMethodManager = (InputMethodManager)  activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
     }
 
     /**
