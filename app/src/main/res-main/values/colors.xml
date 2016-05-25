@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">@color/whitePress</color>
+    <color name="colorPrimary">@color/whiteDark</color>
     <color name="colorPrimaryDark">@color/gray</color>
     <color name="colorAccent">@color/white</color>
 
+    <color name="superBlack">#000000</color>
     <color name="black">#4A4A4A</color>
     <color name="green">#94CA22</color>
     <color name="greenPress">#81B11B</color>
@@ -17,8 +18,11 @@
     <color name="grayPress">#D5D5D5</color>
     <color name="grayDark">#D8D8D8</color>
     <color name="grayDarkPress">#D1D1D1</color>
+    <color name="whiteDark">#F8F8F8</color>
     <color name="white">#FFFFFF</color>
     <color name="whitePress">#F5F5F5</color>
     <color name="whitePressTransparant">#26F5F5F5</color>
+    <color name="grayFont">#B9B9B9</color>
+
 
 </resources>

@@ -1,30 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scrollscreen"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:fillViewport="true">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+    <ScrollView
+        android:id="@+id/scrollscreen"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fillViewport="true">
 
-        <!--layout toolbar-->
-        <include
-            android:id="@+id/actionbarProfile"
-            layout="@layout/toolbar"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_48sdp"/>
+            android:layout_height="match_parent">
 
-        <FrameLayout
-            android:id="@+id/holder"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/actionbarProfile"/>
+            <!--layout actionbar-->
+            <include
+                android:id="@+id/actionbarProfile"
+                layout="@layout/actionbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48sdp"/>
 
-    </RelativeLayout>
+            <FrameLayout
+                android:id="@+id/holder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/actionbarProfile"/>
 
-</ScrollView>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <!--layout menu-->
+    <include
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_menu"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

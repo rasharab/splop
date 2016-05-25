@@ -21,7 +21,7 @@
             android:text="@string/shipping_now"
             android:textColor="@color/black"
             android:textSize="@dimen/font_super_large"
-            app:cust_font="ProximaRegular"/>
+            app:cust_font="ProximaSemiBold"/>
 
         <!--description-->
         <com.dot.Pops.font.PopsTextView
@@ -29,9 +29,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lorem ipsum dollar ismet "
-            android:textColor="@color/black"
+            android:textColor="@color/superBlack"
             android:textSize="@dimen/font_regular"
-            app:cust_font="ProximaRegular"/>
+            app:cust_font="ProximaLight"/>
 
     </LinearLayout>
 
@@ -41,13 +41,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/shippingNowscreen"
-        android:layout_marginLeft="@dimen/_20sdp"
-        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
         layout="@layout/layout_input_shipping"/>
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_70sdp"
         android:layout_below="@+id/centerscreen"/>
 
 </RelativeLayout>

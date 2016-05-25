@@ -35,7 +35,6 @@
 
         </RelativeLayout>
 
-
         <!--layout video-->
         <LinearLayout
             android:id="@+id/layout_logo"
@@ -57,7 +56,6 @@
                     android:id="@+id/logo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".50"
                     android:background="@drawable/logo_green"
                     android:layout_centerInParent="true"/>
 

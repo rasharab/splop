@@ -1,62 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:weightSum="1.0">
+    android:layout_height="wrap_content">
 
-    <!--home-->
-    <ImageView
-        android:id="@+id/menuHome"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_weight="0.20"
-        android:background="@color/gray"
-        android:src="@drawable/ic_home"
-        android:scaleType="centerInside"
-        android:layout_marginTop="@dimen/_10sdp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1.0">
 
-    <!--activity-->
-    <ImageView
-        android:id="@+id/menuActivity"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_weight="0.20"
-        android:background="@color/gray"
-        android:src="@drawable/ic_activity"
-        android:scaleType="centerInside"
-        android:layout_marginTop="@dimen/_10sdp"/>
+        <!--home-->
+        <ImageButton
+            android:id="@+id/menuHome"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_weight="0.20"
+            android:background="@color/gray"
+            android:src="@drawable/ic_home"
+            android:scaleType="centerInside"
+            android:layout_marginTop="@dimen/_10sdp"/>
 
-    <!--activity-->
-    <ImageButton
-        android:id="@+id/menuPlus"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_60sdp"
-        android:layout_weight="0.20"
-        android:background="@color/greenDark"
-        android:src="@drawable/ic_plus"
-        android:scaleType="centerInside"/>
+        <!--activity-->
+        <ImageButton
+            android:id="@+id/menuActivity"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_weight="0.20"
+            android:background="@color/gray"
+            android:src="@drawable/ic_activity"
+            android:scaleType="centerInside"
+            android:layout_marginTop="@dimen/_10sdp"/>
 
-    <!--notification-->
-    <ImageView
-        android:id="@+id/menuNotif"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_weight="0.20"
-        android:background="@color/gray"
-        android:src="@drawable/ic_notification"
-        android:scaleType="centerInside"
-        android:layout_marginTop="@dimen/_10sdp"/>
+        <!--activity-->
+        <RelativeLayout
+            android:id="@+id/menuPlus"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_60sdp"
+            android:background="@drawable/button_green_dark"
+            android:layout_weight="0.20">
+            <ImageView
+                android:id="@+id/icMenuPlus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_plus"
+                android:scaleType="centerInside"/>
+        </RelativeLayout>
 
-    <!--Profile-->
-    <ImageView
-        android:id="@+id/menuProfile"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_weight="0.20"
-        android:background="@color/gray"
-        android:src="@drawable/ic_profile"
-        android:scaleType="centerInside"
-        android:layout_marginTop="@dimen/_10sdp"/>
+        <!--notification-->
+        <ImageButton
+            android:id="@+id/menuNotif"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_weight="0.20"
+            android:background="@color/gray"
+            android:src="@drawable/ic_notification"
+            android:scaleType="centerInside"
+            android:layout_marginTop="@dimen/_10sdp"/>
 
-</LinearLayout>
+        <!--Profile-->
+        <ImageButton
+            android:id="@+id/menuProfile"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_weight="0.20"
+            android:background="@color/gray"
+            android:src="@drawable/ic_profile"
+            android:scaleType="centerInside"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,18 +1,22 @@
 package com.dot.Pops.views.seller;
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.MotionEvent;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 
 import com.dot.Pops.R;
 import com.dot.Pops.helper.ActivityHelper;
@@ -38,8 +42,23 @@ public class MainSeller extends AppCompatActivity {
     FragmentManager fmSingle = getSupportFragmentManager();
     FragmentTransaction fragmentTransaction;
 
-    PopupWindow popupWindow;
+    boolean isClick =false;
 
+    PopupWindow popupWindow;
+    @Bind(R.id.menu)
+    View menu;
+    @Bind(R.id.menuPlus)
+    RelativeLayout menuPlus;
+    @Bind(R.id.icMenuPlus)
+    ImageView icMenuPlus;
+    @Bind(R.id.menuHome)
+    ImageButton menuHome;
+    @Bind(R.id.menuActivity)
+    ImageButton menuActivity;
+    @Bind(R.id.menuNotif)
+    ImageButton menuNotif;
+    @Bind(R.id.menuProfile)
+    ImageButton menuProfile;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,27 +75,27 @@ public class MainSeller extends AppCompatActivity {
         FragmentSeller fragment = new HomeSeller();
         changeFragment(fragment);
 
-//        display popup menu
-        findViewById(R.id.scrollscreen).post(new Runnable() {
-            public void run() {
-                popupWindow();
-            }
-        });
-
+        setupPopup();
 //        handling event keyboard
         KeyboardVisibilityEvent.setEventListener(this, new KeyboardVisibilityEventListener() {
             @Override
             public void onVisibilityChanged(boolean isOpen) {
                 if (isOpen){
                     Log.d("keyboard", isOpen+"");
-                    popupWindow.dismiss();
+                    menu.setVisibility(View.INVISIBLE);
                 }else {
                     Log.d("keyboard", isOpen+"");
-                    popupWindow();
+                    menu.setVisibility(View.VISIBLE);
                 }
 
             }
         });
+    }
+
+//  setup pop window
+    private void setupPopup() {
+        View popupView = this.getLayoutInflater().inflate(R.layout.layout_menu_plus,null);
+        popupWindow = new PopupWindow(popupView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
     }
 
     /**
@@ -90,16 +109,6 @@ public class MainSeller extends AppCompatActivity {
         }else{
             ActivityHelper.addActionbarBack(this, title);
         }
-    }
-
-//    menu
-    public void popupWindow(){
-        View popupView = this.getLayoutInflater().inflate(R.layout.layout_menu,null);
-        popupWindow = new PopupWindow(popupView,
-                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        popupWindow.setFocusable(false);
-        popupWindow.setOutsideTouchable(false);
-        popupWindow.showAtLocation(popupView, Gravity.BOTTOM, 0, 0);
     }
 
     /**
@@ -137,4 +146,124 @@ public class MainSeller extends AppCompatActivity {
             finish();
         }
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @OnClick(R.id.menuHome)
+    protected void toHome(){
+        menuHome();
+    }
+
+    @OnClick(R.id.menuActivity)
+    protected void tomenuActivity(){
+        menuActivity();
+    }
+
+    @OnClick(R.id.menuPlus)
+    protected void toMenuPlus(View v){
+        menuPlus(v);
+    }
+
+    @OnClick(R.id.menuNotif)
+    protected void toNotif(){
+        menuNotif();
+    }
+
+    @OnClick(R.id.menuProfile)
+    protected void tomenuProfile(){
+        menuProfile();
+    }
+
+//    menu home
+    private void menuHome(){
+        menuHome.setImageResource(R.drawable.ic_home_active);
+        menuActivity.setImageResource(R.drawable.ic_activity);
+        menuPlus.setBackgroundColor(ContextCompat.getColor(this, R.color.greenDark));
+        menuNotif.setImageResource(R.drawable.ic_notification);
+        menuProfile.setImageResource(R.drawable.ic_profile);
+        dismisChildMenu();
+    }
+
+//    menu activity
+    private void menuActivity(){
+        menuHome.setImageResource(R.drawable.ic_home);
+        menuActivity.setImageResource(R.drawable.ic_activity_active);
+        menuPlus.setBackgroundColor(ContextCompat.getColor(this, R.color.greenDark));
+        menuNotif.setImageResource(R.drawable.ic_notification);
+        menuProfile.setImageResource(R.drawable.ic_profile);
+        dismisChildMenu();
+    }
+
+//    menu plus
+    private void menuPlus(View v){
+        menuHome.setImageResource(R.drawable.ic_home);
+        menuActivity.setImageResource(R.drawable.ic_activity);
+        menuNotif.setImageResource(R.drawable.ic_notification);
+        menuProfile.setImageResource(R.drawable.ic_profile);
+        menuPlus.setBackgroundColor(ContextCompat.getColor(this, R.color.greenDark));
+        Log.d("click", isClick+"");
+        if (icMenuPlus.getRotation() == 45 || isClick){
+            dismisChildMenu();
+        }else {
+            isClick = true;
+            icMenuPlus.setRotation(45);
+            menuPlus.setBackgroundColor(ContextCompat.getColor(this, R.color.grayDarkPress));
+            childMenu(v);
+        }
+    }
+
+//    menu notif
+    private void menuNotif(){
+        menuHome.setImageResource(R.drawable.ic_home);
+        menuActivity.setImageResource(R.drawable.ic_activity);
+        menuPlus.setBackgroundColor(ContextCompat.getColor(this, R.color.greenDark));
+        menuNotif.setImageResource(R.drawable.ic_notification_actyive);
+        menuProfile.setImageResource(R.drawable.ic_profile);
+        dismisChildMenu();
+    }
+
+//    menu profile
+    private void menuProfile(){
+        menuHome.setImageResource(R.drawable.ic_home);
+        menuActivity.setImageResource(R.drawable.ic_activity);
+        menuPlus.setBackgroundColor(ContextCompat.getColor(this, R.color.greenDark));
+        menuNotif.setImageResource(R.drawable.ic_notification);
+        menuProfile.setImageResource(R.drawable.ic_profile_active);
+        dismisChildMenu();
+    }
+
+//    dismiss childmenu
+    private void dismisChildMenu() {
+        if (icMenuPlus.getRotation() == 45 || isClick){
+            popupWindow.dismiss();
+            icMenuPlus.setRotation(0);
+            isClick = false;
+        }
+    }
+
+    // popup child menu
+    @TargetApi(Build.VERSION_CODES.KITKAT)
+    public void childMenu(View v){
+        isClick = true;
+        popupWindow.setFocusable(false);
+        popupWindow.setOutsideTouchable(false);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            popupWindow.setElevation(30);
+        }
+        int location[] = new int[2];
+        v.getLocationOnScreen(location);
+        popupWindow.setAnimationStyle(R.style.SlideBottom);
+        popupWindow.showAtLocation(v, Gravity.TOP, 0, location[1] -(v.getHeight()) - 10);
+    }
+
+
 }

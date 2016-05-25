@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!--layout toolbar-->
+    <!--layout actionbar-->
     <include
         android:id="@+id/actionbarProfile"
-        layout="@layout/toolbar"
+        layout="@layout/actionbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_48sdp"/>
 

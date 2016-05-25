@@ -55,12 +55,12 @@ public class ActivityHelper {
     }
 
     /**
-     * add toolbar
+     * add actionbar
      * @param appCompatActivity
      * @param title
      */
     public static final void addToolbar(int type, AppCompatActivity appCompatActivity, String title) {
-        // Attaching the layout to the toolbar object
+        // Attaching the layout to the actionbar object
         PopsTextView toolbarTitle = (PopsTextView) appCompatActivity.findViewById(R.id.toolbar_title);
         PopsTextView toolbarTitleBack = (PopsTextView) appCompatActivity.findViewById(R.id.toolbar_title_back);
         if (type == 0) {
@@ -78,7 +78,7 @@ public class ActivityHelper {
     }
 
     /**
-     * add toolbar with title
+     * add actionbar with title
      * @param appCompatActivity
      * @param title
      */

@@ -297,7 +297,8 @@ public class MapPointing extends AppCompatActivity implements
                     REQUEST,
                     this);
             CURRENT_LOCATION = new LatLng(location.getLatitude(), location.getLongitude());
-            setupGoogleMap(CURRENT_LOCATION);
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CURRENT_LOCATION, 16.0f));
+//            setupGoogleMap(CURRENT_LOCATION);
         } catch (Exception e) {
         }
     }
