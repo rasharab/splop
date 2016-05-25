@@ -3,30 +3,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--layout toolbar-->
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_48sdp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+
     <ScrollView
         android:id="@+id/scrollscreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
+        android:layout_below="@+id/actionbar"
         android:fillViewport="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!--layout actionbar-->
-            <include
-                android:id="@+id/actionbarProfile"
-                layout="@layout/actionbar"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_48sdp"/>
-
             <FrameLayout
                 android:id="@+id/holder"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/actionbarProfile"/>
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_below="@+id/holder"/>
 
         </RelativeLayout>
 
@@ -38,7 +43,7 @@
         android:id="@+id/menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/layout_menu"
+        layout="@layout/layout_main_menu"
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

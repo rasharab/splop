@@ -45,9 +45,4 @@
         android:layout_marginRight="@dimen/_10sdp"
         layout="@layout/layout_input_shipping"/>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_70sdp"
-        android:layout_below="@+id/centerscreen"/>
-
 </RelativeLayout>

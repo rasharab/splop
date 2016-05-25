@@ -17,8 +17,6 @@ import butterknife.OnClick;
 
 public class HomeSeller extends FragmentSeller {
 
-    private final String TITLE = "Home";
-
     View view;
 
     @Nullable
@@ -33,7 +31,7 @@ public class HomeSeller extends FragmentSeller {
     }
 
     private void setupFragment() {
-        activity.addActionBar(activity.ACTIONBAR_NO_BACK, TITLE);
+        activity.addActionBar(activity.ACTIONBAR_NO_BACK, getString(R.string.home));
     }
 
     @OnClick(R.id.buttonRate)

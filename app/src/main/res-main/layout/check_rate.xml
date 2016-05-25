@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!--layout actionbar-->
+    <!--layout toolbar-->
     <include
         android:id="@+id/actionbarProfile"
-        layout="@layout/actionbar"
+        layout="@layout/toolbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_48sdp"/>
 
@@ -285,9 +285,5 @@
             app:cust_font="ProximaRegular"/>
 
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_65sdp"/>
 
 </LinearLayout>

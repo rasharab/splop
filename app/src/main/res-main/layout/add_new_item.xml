@@ -14,7 +14,7 @@
         <!--layout actionbar-->
         <include
             android:id="@+id/actionbarNewItem"
-            layout="@layout/actionbar_back"
+            layout="@layout/toolbar_back"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_48sdp"/>
 

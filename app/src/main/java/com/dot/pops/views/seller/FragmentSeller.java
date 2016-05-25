@@ -9,7 +9,7 @@ import android.support.v4.app.Fragment;
 
 public class FragmentSeller extends Fragment {
 
-    MainSeller activity;
+    public MainSeller activity;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

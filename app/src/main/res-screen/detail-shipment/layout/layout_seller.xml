@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--text seller location-->
+    <com.dot.Pops.font.PopsTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seller_location"
+        android:textSize="@dimen/font_regular"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        app:cust_font="ProximaLight"/>
+
+    <!--location-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/locationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--location value-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jakarta"
+                android:textSize="@dimen/font_regular"
+                android:textColor="@color/grayFont"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_10sdp"
+                android:layout_toLeftOf="@+id/imageArrow"
+                app:cust_font="ProximaRegular"/>
+
+            <!--image arrow-->
+            <ImageView
+                android:id="@+id/imageArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_cevron_grey"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_10sdp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!--weight & volume-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/descriptionView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--group weight-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--weight-->
+                <com.dot.Pops.font.PopsTextView
+                    android:id="@+id/textWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight"
+                    android:textSize="@dimen/font_regular"
+                    android:textColor="@color/magenta"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_10sdp"
+                    app:cust_font="ProximaRegular"/>
+
+                <!--weight value-->
+                <com.dot.Pops.font.PopsTextView
+                    android:id="@+id/weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 Kg"
+                    android:textSize="@dimen/font_regular"
+                    android:textColor="@color/grayFont"
+                    android:gravity="right"
+                    android:layout_toRightOf="@+id/textWeight"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/_10sdp"
+                    app:cust_font="ProximaRegular"/>
+
+            </RelativeLayout>
+            <!--vertical line-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/grayLine"/>
+            <!--group volume-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--weight-->
+                <com.dot.Pops.font.PopsTextView
+                    android:id="@+id/textVolume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/volum"
+                    android:textSize="@dimen/font_regular"
+                    android:textColor="@color/magenta"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_10sdp"
+                    app:cust_font="ProximaRegular"/>
+
+                <!--weight value-->
+                <com.dot.Pops.font.PopsTextView
+                    android:id="@+id/volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 M3"
+                    android:textSize="@dimen/font_regular"
+                    android:textColor="@color/grayFont"
+                    android:gravity="right"
+                    android:layout_toRightOf="@+id/textVolume"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/_10sdp"
+                    app:cust_font="ProximaRegular"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

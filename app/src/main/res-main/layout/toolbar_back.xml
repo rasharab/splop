@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!--actionbar-->
+        <!--toolbar-->
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
             app:contentInsetStart="0dp"
             android:background="@color/white">
 
-            <!--actionbar title-->
+            <!--toolbar title-->
             <com.dot.Pops.font.PopsTextView
                 android:id="@+id/toolbar_title"
                 android:layout_width="fill_parent"

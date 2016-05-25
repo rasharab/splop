@@ -16,10 +16,10 @@
         android:focusableInTouchMode="true"
         android:fillViewport="true">
 
-        <!--layout actionbar-->
+        <!--layout toolbar-->
         <include
             android:id="@+id/actionbarProfile"
-            layout="@layout/actionbar"
+            layout="@layout/toolbar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_48sdp"/>
 

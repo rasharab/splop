@@ -34,8 +34,8 @@ import butterknife.OnClick;
 
 public class MainSeller extends AppCompatActivity {
 
-    protected static final int ACTIONBAR_NO_BACK = 0;
-    protected static final int ACTIONBAR_BACK = 1;
+    public static final int ACTIONBAR_NO_BACK = 0;
+    public static final int ACTIONBAR_BACK = 1;
 
     private FragmentSeller fragment   = null;
     FragmentManager fm = getSupportFragmentManager();
@@ -103,7 +103,7 @@ public class MainSeller extends AppCompatActivity {
      * @param type
      * @param title
      */
-    protected void addActionBar(int type, String title){
+    public void addActionBar(int type, String title){
         if (type == ACTIONBAR_NO_BACK){
             ActivityHelper.addActionbar(this, title);
         }else{
@@ -262,7 +262,7 @@ public class MainSeller extends AppCompatActivity {
         int location[] = new int[2];
         v.getLocationOnScreen(location);
         popupWindow.setAnimationStyle(R.style.SlideBottom);
-        popupWindow.showAtLocation(v, Gravity.TOP, 0, location[1] -(v.getHeight()) - 10);
+        popupWindow.showAtLocation(v, Gravity.TOP, 0, location[1] -(v.getHeight()) - 30);
     }
 
 

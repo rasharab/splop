@@ -7,8 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.dot.Pops.R;
+import com.dot.Pops.views.seller.shipment.DetailShipment;
 
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Win7 on 23/05/2016.
@@ -31,4 +33,11 @@ public class CheckRate extends FragmentSeller {
     private void setupFragment() {
         activity.addActionBar(activity.ACTIONBAR_BACK, getString(R.string.check_rate));
     }
+
+    @OnClick(R.id.buttonCreateShipment)
+    protected void toCreateShipment(){
+        FragmentSeller fDetailShipment = new DetailShipment();
+        activity.singleFragment(fDetailShipment);
+    }
+
 }
