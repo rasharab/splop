@@ -20,6 +20,7 @@ import android.widget.RelativeLayout;
 
 import com.dot.Pops.R;
 import com.dot.Pops.helper.ActivityHelper;
+import com.dot.Pops.views.seller.useractivity.UserActivity;
 
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent;
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEventListener;
@@ -72,7 +73,7 @@ public class MainSeller extends AppCompatActivity {
 
     private void setup() {
 //        set first fragment
-        FragmentSeller fragment = new HomeSeller();
+        fragment = new HomeSeller();
         changeFragment(fragment);
 
         setupPopup();
@@ -166,6 +167,8 @@ public class MainSeller extends AppCompatActivity {
     @OnClick(R.id.menuActivity)
     protected void tomenuActivity(){
         menuActivity();
+        fragment = new UserActivity();
+        changeFragment(fragment);
     }
 
     @OnClick(R.id.menuPlus)

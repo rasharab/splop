@@ -1,4 +1,4 @@
-package com.dot.Pops.views.main;
+package com.dot.Pops.views.main.auth;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

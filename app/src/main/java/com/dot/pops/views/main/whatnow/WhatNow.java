@@ -1,4 +1,4 @@
-package com.dot.Pops.views.main;
+package com.dot.Pops.views.main.whatnow;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.dot.Pops.R;
 import com.dot.Pops.helper.ActivityHelper;
+import com.dot.Pops.views.main.Profile.ProfileInformation;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

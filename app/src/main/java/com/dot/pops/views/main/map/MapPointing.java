@@ -1,4 +1,4 @@
-package com.dot.Pops.views.seller;
+package com.dot.Pops.views.main.map;
 
 import android.Manifest;
 import android.annotation.TargetApi;

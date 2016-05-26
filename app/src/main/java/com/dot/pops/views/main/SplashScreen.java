@@ -1,22 +1,17 @@
 package com.dot.Pops.views.main;
 
 import android.annotation.TargetApi;
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
-import android.widget.Button;
 import android.widget.VideoView;
 
 import com.dot.Pops.R;
 import com.dot.Pops.helper.ActivityHelper;
-
-import java.io.IOException;
+import com.dot.Pops.views.main.auth.Login;
+import com.dot.Pops.views.main.auth.Register;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

@@ -1,4 +1,4 @@
-package com.dot.Pops.views.main;
+package com.dot.Pops.views.main.Profile;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.dot.Pops.R;
 import com.dot.Pops.helper.ActivityHelper;
 import com.dot.Pops.views.seller.MainSeller;
-import com.dot.Pops.views.seller.MapPointing;
+import com.dot.Pops.views.main.map.MapPointing;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

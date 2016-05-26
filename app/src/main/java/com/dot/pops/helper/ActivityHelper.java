@@ -3,8 +3,6 @@ package com.dot.Pops.helper;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -12,7 +10,6 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.dot.Pops.R;
 import com.dot.Pops.font.PopsTextView;
-import com.dot.Pops.views.main.Register;
 
 /**
  * Created by Win7 on 20/05/2016.
