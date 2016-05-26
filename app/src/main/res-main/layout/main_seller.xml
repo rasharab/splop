@@ -8,9 +8,7 @@
         android:id="@+id/actionbar"
         layout="@layout/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_48sdp"
-        android:focusable="true"
-        android:focusableInTouchMode="true"/>
+        android:layout_height="@dimen/_48sdp"/>
 
     <ScrollView
         android:id="@+id/scrollscreen"

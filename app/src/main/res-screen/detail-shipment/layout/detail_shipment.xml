@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <!--recycleview to collect item-->
-    <android.support.v7.widget.RecyclerView
+    <com.dot.Pops.helper.NoScrollRecycler
         android:id="@+id/rv"
         android:scrollbars="vertical"
         android:layout_width="match_parent"

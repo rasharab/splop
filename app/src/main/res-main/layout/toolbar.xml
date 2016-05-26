@@ -14,34 +14,54 @@
             android:id="@+id/toolbar"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:minHeight="?attr/actionBarSize"
+            android:contentInsetRight="0dp"
+            android:contentInsetEnd="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
             app:contentInsetStart="0dp"
-            android:background="@color/white">
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp">
 
-            <!--title no back-->
-            <com.dot.Pops.font.PopsTextView
-                android:id="@+id/toolbar_title"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:text="@string/want_so_what_now"
-                android:gravity = "center"
-                android:textColor="@color/black"
-                android:textSize="@dimen/font_large"
-                android:visibility="gone"
-                app:cust_font="ProximaRegular"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <!--title with back-->
-            <com.dot.Pops.font.PopsTextView
-                android:id="@+id/toolbar_title_back"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:text="@string/login"
-                android:gravity = "center"
-                android:textColor="@color/black"
-                android:textSize="@dimen/font_large"
-                android:paddingLeft="@dimen/_minus48sdp"
-                android:paddingStart="@dimen/_minus48sdp"
-                android:visibility="gone"
-                app:cust_font="ProximaRegular"/>
+                <!--title no back-->
+                <com.dot.Pops.font.PopsTextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/want_so_what_now"
+                    android:gravity = "center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_large"
+                    android:visibility="gone"
+                    app:cust_font="ProximaRegular"/>
+
+                <!--title with back-->
+                <com.dot.Pops.font.PopsTextView
+                    android:id="@+id/toolbar_title_back"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/login"
+                    android:gravity = "center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_large"
+                    android:paddingLeft="@dimen/_minus48sdp"
+                    android:paddingStart="@dimen/_minus48sdp"
+                    android:visibility="gone"
+                    app:cust_font="ProximaRegular"/>
+
+                <!--<View android:layout_width="match_parent"-->
+                    <!--android:layout_height="5dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:background="@drawable/toolbar_dropshadow"/>-->
+
+            </RelativeLayout>
 
         </android.support.v7.widget.Toolbar>
 

@@ -21,9 +21,11 @@
         <item name="colorControlHighlight">@color/gray</item>
     </style>
 
+    <!--main theme-->
     <style name="Theme.Pops" parent="Base.Theme.Pops">
     </style>
 
+    <!--no actionbar-->
     <style name="Base.Theme.Pops" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -33,11 +35,13 @@
         <item name="colorControlHighlight">@color/gray</item>
     </style>
 
+    <!--animation popup-->
     <style name="SlideBottom" parent="android:Animation">
         <item name="@android:windowEnterAnimation">@anim/bottomup</item>
         <item name="@android:windowExitAnimation">@anim/bottomdown</item>
     </style>
 
+    <!--custome button facebook login    -->
     <style name="FacebookLoginButton">
         <item name="android:textSize">@dimen/font_regular</item>
         <item name="android:background">@drawable/button_white</item>

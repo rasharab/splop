@@ -49,8 +49,8 @@
     <string name="shipping_now">Shipping Now...</string>
     <string name="volum">Volume</string>
     <string name="total">Total</string>
-    <string name="create_shippment">Create Shippment</string>
-    <string name="detail_shippment">Detail Shippment</string>
+    <string name="create_shippment">Create Shipment</string>
+    <string name="detail_shippment">Detail Shipment</string>
     <string name="seller_location">Seller Location</string>
     <string name="existing_product">Existing Product</string>
     <string name="send_to">Send To</string>

@@ -74,7 +74,6 @@ public class ActivityHelper {
         }
         Toolbar toolbar = (Toolbar) appCompatActivity.findViewById(R.id.toolbar);
         appCompatActivity.setSupportActionBar(toolbar);
-        appCompatActivity.getSupportActionBar().setElevation(50);
     }
 
     /**
@@ -92,6 +91,7 @@ public class ActivityHelper {
         addToolbar(1, appCompatActivity, title);
         appCompatActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         appCompatActivity.getSupportActionBar().setDisplayShowHomeEnabled(true);
+        appCompatActivity.getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back_green);
     }
 
 }
