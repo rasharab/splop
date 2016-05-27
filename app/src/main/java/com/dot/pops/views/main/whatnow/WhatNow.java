@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import com.dot.Pops.R;
 import com.dot.Pops.helper.ActivityHelper;
-import com.dot.Pops.views.main.Profile.ProfileInformation;
+import com.dot.Pops.views.main.profile.ProfileInformation;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

@@ -1,4 +1,4 @@
-package com.dot.Pops.views.main.Profile;
+package com.dot.Pops.views.main.profile;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

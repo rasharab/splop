@@ -20,6 +20,7 @@ import android.widget.RelativeLayout;
 
 import com.dot.Pops.R;
 import com.dot.Pops.helper.ActivityHelper;
+import com.dot.Pops.views.main.profile.ProfileMenu;
 import com.dot.Pops.views.seller.useractivity.UserActivity;
 
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent;
@@ -184,6 +185,8 @@ public class MainSeller extends AppCompatActivity {
     @OnClick(R.id.menuProfile)
     protected void tomenuProfile(){
         menuProfile();
+        fragment = new ProfileMenu();
+        changeFragment(fragment);
     }
 
 //    menu home

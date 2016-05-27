@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/mainheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/greenDark">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/_10sdp">
+
+            <!--image profile-->
+            <include
+                android:id="@+id/imagescreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                layout="@layout/profile_image"/>
+
+            <!--name-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/profileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keyla Manola"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:cust_font="ProximaSemiBold"/>
+
+            <!--balance-->
+            <com.dot.Pops.font.PopsTextView
+                android:id="@+id/profileBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balance : IDR 200.000"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_regular"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:cust_font="ProximaLight"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

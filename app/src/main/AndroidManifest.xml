@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--main-->
         <activity
             android:name=".views.main.auth.Login"
             android:theme="@style/AppTheme"/>
@@ -26,11 +28,18 @@
             android:name=".views.main.auth.Forgot"
             android:theme="@style/AppTheme"/>
         <activity android:name=".views.main.whatnow.WhatNow"/>
-        <activity android:name=".views.main.Profile.ProfileInformation"
+
+        <!--profile-->
+        <activity
+            android:name=".views.main.profile.ProfileInformation"
+            android:theme="@style/Theme.Input"/>
+        <activity android:name=".views.main.map.MapPointing"/>
+        <activity android:name=".views.main.complain.Complain"
             android:theme="@style/Theme.Input"/>
 
+        <!--seller-->
         <activity android:name=".views.seller.MainSeller"/>
-        <activity android:name=".views.main.map.MapPointing"/>
+
         
         <!--facebook-->
         <activity
