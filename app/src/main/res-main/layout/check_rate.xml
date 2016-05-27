@@ -35,7 +35,8 @@
                 android:textSize="@dimen/font_very_large"
                 android:textColor="@color/black"
                 android:layout_gravity="center_horizontal"
-                app:cust_font="ProximaRegular"/>
+                android:id="@+id/shipingNow"
+                app:cust_font="ProximaSemiBold"/>
 
             <!--text description-->
             <com.dot.Pops.font.PopsTextView
@@ -43,8 +44,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/lorem_ipsum"
                 android:textSize="@dimen/font_small"
-                android:textColor="@color/black"
-                android:layout_gravity="center_horizontal"/>
+                android:textColor="@color/superBlack"
+                android:layout_gravity="center_horizontal"
+                app:cust_font="ProximaLight"/>
 
         </LinearLayout>
 
@@ -80,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:text="Jakarta"
                     android:textSize="@dimen/font_regular"
-                    android:textColor="@color/grayDark"
+                    android:textColor="@color/grayFont"
                     android:gravity="right"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
@@ -92,7 +94,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/grayDark"
+                    android:background="@color/gray"
                     android:layout_below="@+id/origin"
                     android:layout_marginTop="@dimen/_5sdp"/>
 
@@ -123,7 +125,7 @@
                     android:layout_height="wrap_content"
                     android:text="Malang"
                     android:textSize="@dimen/font_regular"
-                    android:textColor="@color/grayDark"
+                    android:textColor="@color/grayFont"
                     android:gravity="right"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
@@ -135,7 +137,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/grayDark"
+                    android:background="@color/gray"
                     android:layout_below="@+id/destination"
                     android:layout_marginTop="@dimen/_5sdp"/>
 
@@ -166,7 +168,7 @@
                     android:layout_height="wrap_content"
                     android:text="10 kg"
                     android:textSize="@dimen/font_regular"
-                    android:textColor="@color/grayDark"
+                    android:textColor="@color/grayFont"
                     android:gravity="right"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
@@ -178,7 +180,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/grayDark"
+                    android:background="@color/gray"
                     android:layout_below="@+id/weight"
                     android:layout_marginTop="@dimen/_5sdp"/>
 
@@ -209,7 +211,7 @@
                     android:layout_height="wrap_content"
                     android:text="10 M3"
                     android:textSize="@dimen/font_regular"
-                    android:textColor="@color/grayDark"
+                    android:textColor="@color/grayFont"
                     android:gravity="right"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
@@ -221,7 +223,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/grayDark"
+                    android:background="@color/gray"
                     android:layout_below="@+id/volume"
                     android:layout_marginTop="@dimen/_5sdp"/>
 
@@ -241,11 +243,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/total"
-                android:textSize="@dimen/font_regular"
+                android:textSize="@dimen/font_large"
                 android:textColor="@color/greenDark"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                app:cust_font="ProximaRegular"/>
+                app:cust_font="ProximaSemiBold"/>
 
             <!--total-->
             <com.dot.Pops.font.PopsTextView
@@ -254,13 +256,13 @@
                 android:layout_height="wrap_content"
                 android:text="Rp. 22.000"
                 android:textSize="@dimen/font_regular"
-                android:textColor="@color/grayDarkPress"
+                android:textColor="@color/grayFont"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/titleTotal"
                 android:gravity="right"
                 android:paddingLeft="@dimen/_3sdp"
-                app:cust_font="ProximaRegular"/>
+                app:cust_font="ProximaSemiBold"/>
 
         </RelativeLayout>
 

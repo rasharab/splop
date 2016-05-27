@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pops" >
-        <activity android:name="com.dot.Pops.views.main.SplashScreen" >
+        <activity android:name="com.dot.Pops.module.main.SplashScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,26 +19,27 @@
 
         <!--main-->
         <activity
-            android:name=".views.main.auth.Login"
+            android:name=".module.main.auth.Login"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name=".views.main.auth.Register"
+            android:name=".module.main.auth.Register"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name=".views.main.auth.Forgot"
+            android:name=".module.main.auth.Forgot"
             android:theme="@style/AppTheme"/>
-        <activity android:name=".views.main.whatnow.WhatNow"/>
+        <activity android:name=".module.main.whatnow.WhatNow"/>
 
         <!--profile-->
         <activity
-            android:name=".views.main.profile.ProfileInformation"
+            android:name=".module.main.profile.ProfileInformation"
             android:theme="@style/Theme.Input"/>
-        <activity android:name=".views.main.map.MapPointing"/>
-        <activity android:name=".views.main.complain.Complain"
+        <activity android:name=".module.main.map.MapPointing"/>
+        <activity android:name=".module.main.profile.Complain"
             android:theme="@style/Theme.Input"/>
 
         <!--seller-->
-        <activity android:name=".views.seller.MainSeller"/>
+        <activity android:name=".module.seller.MainSeller"/>
+        <activity android:name=".module.seller.item.NewItem"/>
 
         
         <!--facebook-->

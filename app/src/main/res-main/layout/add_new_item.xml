@@ -1,145 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainscreen"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/mainscreen"
+    <!--layout actionbar-->
+    <include
+        android:id="@+id/actionbarNewItem"
+        layout="@layout/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="@dimen/_48sdp"/>
 
-        <!--layout actionbar-->
-        <include
-            android:id="@+id/actionbarNewItem"
-            layout="@layout/toolbar_back"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_48sdp"/>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbarNewItem"
+        android:fillViewport="true">
 
-        <!--layout take photo-->
         <RelativeLayout
-            android:id="@+id/photoscreen"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_150sdp"
-            android:layout_below="@+id/actionbarNewItem"
-            android:background="@color/gray">
+            android:layout_height="match_parent">
 
-            <!--button to take photo-->
-            <include
-                android:id="@+id/takePhoto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                layout="@layout/layout_button_camera"/>
-
-            <!--image result-->
-            <ImageView
-                android:id="@+id/image"
+            <!--layout take photo-->
+            <RelativeLayout
+                android:id="@+id/photoscreen"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerInside"/>
+                android:layout_height="@dimen/_150sdp"
+                android:background="@color/gray">
+
+                <!--button to take photo-->
+                <include
+                    android:id="@+id/takePhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    layout="@layout/layout_button_camera"/>
+
+                <!--image result-->
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"/>
+
+            </RelativeLayout>
+
+            <!--layout description-->
+            <LinearLayout
+                android:id="@+id/descriptionscreen"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp"
+                android:layout_below="@+id/photoscreen">
+
+                <!--title description-->
+                <com.dot.Pops.font.PopsTextView
+                    android:id="@+id/titleDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description"
+                    android:textSize="@dimen/font_regular"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/magenta"
+                    android:layout_gravity="center_horizontal"
+                    app:cust_font="ProximaLight"/>
+
+                <!--description-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:minHeight="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:elevation="@dimen/_2sdp">
+
+                    <com.dot.Pops.font.PopsEditText
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:hint="@string/write_something"
+                        android:textColor="@color/grayFont"
+                        android:textColorHint="@color/grayFont"
+                        android:textSize="@dimen/font_regular"
+                        android:background="@color/white"
+                        android:padding="@dimen/_5sdp"
+                        app:cust_font="ProximaRegular"/>
+
+                </android.support.v7.widget.CardView>
+
+                <!--title price-->
+                <com.dot.Pops.font.PopsTextView
+                    android:id="@+id/titlePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_indo"
+                    android:textSize="@dimen/font_regular"
+                    android:textColor="@color/magenta"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cust_font="ProximaLight"/>
+
+                <!--price-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardBackgroundColor="@color/color_white"
+                    android:elevation="@dimen/_2sdp">
+
+                    <com.dot.Pops.font.PopsEditText
+                        android:id="@+id/price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:hint="@string/how_much_does_it_cost"
+                        android:textColor="@color/grayFont"
+                        android:textColorHint="@color/grayFont"
+                        android:textSize="@dimen/font_regular"
+                        android:background="@color/white"
+                        android:padding="@dimen/_10sdp"
+                        app:cust_font="ProximaRegular"/>/>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/descriptionscreen"
+                android:layout_above="@+id/buttonSave"/>
+
+            <!--button save-->
+            <com.dot.Pops.font.PopsButton
+                android:id="@+id/buttonSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_regular"
+                android:background="@color/greenDark"
+                android:layout_alignParentBottom="true"
+                app:cust_font="ProximaRegular"/>
 
         </RelativeLayout>
 
-        <!--layout description-->
-        <LinearLayout
-            android:id="@+id/descriptionscreen"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_10sdp"
-            android:layout_below="@+id/photoscreen">
+    </android.support.v4.widget.NestedScrollView>
 
-            <!--title description-->
-            <com.dot.Pops.font.PopsTextView
-                android:id="@+id/titleDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/description"
-                android:textSize="@dimen/font_regular"
-                android:textColor="@color/magenta"
-                android:layout_gravity="center_horizontal"
-                app:cust_font="ProximaLight"/>
-
-            <!--description-->
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:minHeight="@dimen/_50sdp"
-                android:layout_marginTop="@dimen/_5sdp">
-
-                <com.dot.Pops.font.PopsEditText
-                    android:id="@+id/description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textMultiLine"
-                    android:hint="@string/write_something"
-                    android:textColor="@color/grayDark"
-                    android:textColorHint="@color/grayDark"
-                    android:textSize="@dimen/font_regular"
-                    android:background="@color/white"
-                    android:padding="@dimen/_3sdp"
-                    app:cust_font="ProximaRegular"/>
-
-            </android.support.v7.widget.CardView>
-
-            <!--title price-->
-            <com.dot.Pops.font.PopsTextView
-                android:id="@+id/titlePrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/price_indo"
-                android:textSize="@dimen/font_regular"
-                android:textColor="@color/magenta"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/_5sdp"
-                app:cust_font="ProximaLight"/>
-
-            <!--price-->
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:layout_marginTop="@dimen/_5sdp">
-
-                <com.dot.Pops.font.PopsEditText
-                    android:id="@+id/price"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:hint="@string/how_much_does_it_cost"
-                    android:textColor="@color/grayDark"
-                    android:textColorHint="@color/grayDark"
-                    android:textSize="@dimen/font_regular"
-                    android:background="@color/white"
-                    android:padding="@dimen/_10sdp"
-                    app:cust_font="ProximaRegular"/>/>
-
-            </android.support.v7.widget.CardView>
-
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/descriptionscreen"
-            android:layout_above="@+id/buttonSave"/>
-
-        <!--button save-->
-        <com.dot.Pops.font.PopsButton
-            android:id="@+id/buttonSave"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/save"
-            android:textColor="@color/white"
-            android:textSize="@dimen/font_regular"
-            android:background="@color/greenDark"
-            android:layout_alignParentBottom="true"
-            app:cust_font="ProximaRegular"/>
-
-    </RelativeLayout>
-
-</android.support.v4.widget.NestedScrollView>
+</RelativeLayout>
