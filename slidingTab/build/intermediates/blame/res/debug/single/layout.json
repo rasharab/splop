@@ -24,12 +24,12 @@
         "source": "D:\\Project\\raja-pindah-android\\libraryTab\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
-        "merged": "D:\\Project\\raja-pindah-android\\libraryTab\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "D:\\Project\\raja-pindah-android\\libraryTab\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_part_time.xml"
-    },
-    {
         "merged": "D:\\Project\\raja-pindah-android\\libraryTab\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
         "source": "D:\\Project\\raja-pindah-android\\libraryTab\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "D:\\Project\\raja-pindah-android\\libraryTab\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "D:\\Project\\raja-pindah-android\\libraryTab\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\notification_template_part_time.xml"
     },
     {
         "merged": "D:\\Project\\raja-pindah-android\\libraryTab\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
@@ -56,12 +56,12 @@
         "source": "D:\\Project\\pops-android\\slidingTab\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "D:\\Project\\raja-pindah-android\\libraryTab\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "D:\\Project\\raja-pindah-android\\libraryTab\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_menu_layout.xml"
-    },
-    {
         "merged": "D:\\Project\\raja-pindah-android\\libraryTab\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
         "source": "D:\\Project\\raja-pindah-android\\libraryTab\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "D:\\Project\\raja-pindah-android\\libraryTab\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "D:\\Project\\raja-pindah-android\\libraryTab\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
         "merged": "D:\\Project\\pops-android\\slidingTab\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
