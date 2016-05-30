@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libraryTab/libraryTab.iml" filepath="$PROJECT_DIR$/libraryTab/libraryTab.iml" />
       <module fileurl="file://$PROJECT_DIR$/pops-android.iml" filepath="$PROJECT_DIR$/pops-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/slidingTab/slidingTab.iml" filepath="$PROJECT_DIR$/slidingTab/slidingTab.iml" />
     </modules>
   </component>
 </project>
